@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Template
 metadata:
   annotations:
-    description: Jeus8(Openjdk1.7) Default Template
-    name: Jeus8-Default Template
+    description: Tomcat(Openjdk1.8) Default Template
+    name: Tomcat-Default Template
 objects:
 - apiVersion: v1
   kind: DeploymentConfig
@@ -22,8 +22,6 @@ objects:
               - containerPort: ${TARGET_PORT}
                 protocol: TCP
         restartPolicy: Always
-        serviceAccountName: tmax
-        serviceAccount: tmax
     replicas: 1
     triggers:
       - type: ImageChange
