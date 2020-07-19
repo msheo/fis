@@ -9,10 +9,11 @@ LABEL maintainer="minseok.heo@lotte.net" \
 ARG HTTP_PORT=8080
 #Add Java Options
 ENV JAVA_OPTS="-Xms1g -Xmx1g"
-#SET LOCALE
+#SET LOCALE,TZ
 ENV LANG=ko_KR.UTF-8
 ENV LANGUAGE=ko
 ENV LC_ALL=C.UTF-8
+ENV TZ=Asia/Seoul
 
 #COPY WAR(Change name of something.war to ROOT.war for default context path '/' or change server.xml)
 COPY *.war ${CATALINA_HOME}/webapps/
